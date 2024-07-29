@@ -12,22 +12,22 @@ export const Footer = () => {
                 <SocialsList>
                     <SocialItem>
                         <SocialLink>
-                            <Icon iconId="instagram" height="21px" width="21px" viewBox="0 0 21 21"/>
+                            <Icon iconId="instagram" height="21px" width="21px" viewBox="0 0 21px 21px"/>
                         </SocialLink>
                     </SocialItem>
                     <SocialItem>
                         <SocialLink>
-                            <Icon iconId="telegram" height="21px" width="21px" viewBox="0 0 21 21"/>
+                            <Icon iconId="telegram" height="21px" width="21px" viewBox="0 0 21px 21px"/>
                         </SocialLink>
                     </SocialItem>
                     <SocialItem>
                         <SocialLink>
-                            <Icon iconId="vk" height="21px" width="21px" viewBox="0 0 21 21"/>
+                            <Icon iconId="vk" height="21px" width="21px" viewBox="0 0 21px 21px"/>
                         </SocialLink>
                     </SocialItem>
                     <SocialItem>
                         <SocialLink>
-                            <Icon iconId="linkedin" height="21px" width="21px" viewBox="0 0 21 21"/>
+                            <Icon iconId="linkedin" height="21px" width="21px" viewBox="0 0 21px 21px"/>
                         </SocialLink>
                     </SocialItem>
                 </SocialsList>

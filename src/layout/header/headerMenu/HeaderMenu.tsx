@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 
-export const HeaderMenu = (props: {menuItems: string[]}) => {
+export const HeaderMenu = (props: { menuItems: string[] }) => {
     return (
         <StyledHeaderMenu>
             <ul>
@@ -25,11 +25,15 @@ export const HeaderMenu = (props: {menuItems: string[]}) => {
 };
 
 const StyledHeaderMenu = styled.nav`
-ul {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-}
+    ul {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
+    
+    @media ${theme.media.tablet} {
+        display: none;
+    }
 `;
 
 const Link = styled.a`
@@ -48,9 +52,10 @@ const Mask = styled.span`
     height: 50%;
     overflow-y: hidden;
     color: ${theme.colors.accent};
-    
+
     & + & {
         top: 50%;
+
         span {
             display: inline-block;
             transform: translateY(-50%);
@@ -60,7 +65,7 @@ const Mask = styled.span`
 
 const ListItem = styled.li`
     position: relative;
-    
+
     &::before {
         content: "";
         display: inline-block;
@@ -71,18 +76,19 @@ const ListItem = styled.li`
         left: -10px;
         right: -10px;
         z-index: 1;
-        
+
         transform: scale(0);
     }
-    
+
     &:hover {
         &::before {
             transform: scale(1);
         }
-        
+
         ${Mask} {
             transform: skewX(12deg) translateX(5px);
             color: ${theme.colors.font};
+
             & + ${Mask} {
                 transform: skewX(12deg) translateX(-5px);
             }
