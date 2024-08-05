@@ -1,32 +1,26 @@
-import React from 'react';
-import styled from "styled-components";
+import React, {FC} from 'react';
 import {Link} from "../../../../components/Link";
+import {S} from "../Works_Styles";
 
-export const TabMenu = (props: { menuItems: string[] }) => {
+export type TabStatusType = "all" | "landing" | "react" | "spa";
+
+type TabMenuPropsType = {
+    tabsItems: Array<{ status: TabStatusType, title: string }>,
+    changeFilterStatus: (value: TabStatusType) => void,
+    currentFilterStatus: string
+};
+
+export const TabMenu: FC<TabMenuPropsType> = (props: TabMenuPropsType) => {
     return (
-        <StyledTabMenu>
+        <S.TabMenu>
             <ul>
-                {props.menuItems.map((item, index) => {
-                    return <ListItem key={index}>
-                        <Link href="#">{item}</Link>
-                    </ListItem>
+                {props.tabsItems.map((item, index) => {
+                    return <S.ListItem key={index}>
+                        <Link as={"button"} active={item.status === props.currentFilterStatus} onClick={() => {props.changeFilterStatus(item.status)}}>{item.title}</Link>
+                    </S.ListItem>
                 })}
             </ul>
-        </StyledTabMenu>
+        </S.TabMenu>
     );
 };
 
-const StyledTabMenu = styled.nav`
-    ul {
-        display: flex;
-        justify-content: space-between;
-        max-width: 352px;
-        width: 100%;
-        margin: 0 auto 40px;
-        //border: 1px solid darkred;
-    }
-`;
-
-const ListItem = styled.li`
-  
-`;

@@ -4,6 +4,22 @@ import {theme} from "../../../styles/Theme";
 import {Link} from "../../../components/Link";
 import {Button} from "../../../components/Button";
 
+// Works
+const TabMenu = styled.nav`
+    ul {
+        display: flex;
+        justify-content: space-between;
+        max-width: 352px;
+        width: 100%;
+        margin: 0 auto 40px;
+        //border: 1px solid darkred;
+    }
+`;
+
+const ListItem = styled.li`
+  
+`;
+
 const Works = styled.section`
     ${FlexWrapper} {
         gap: 30px;
@@ -98,6 +114,8 @@ const Text = styled.p`
 
 
 export const S = {
+    TabMenu,
+    ListItem,
     Works,
     Work,
     ImageWrapper,
