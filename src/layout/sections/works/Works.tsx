@@ -49,7 +49,7 @@ export const Works: FC = () => {
     }
 
     return (
-        <S.Works>
+        <S.Works id={"works"}>
             <Container>
                 <SectionTitle>My Works</SectionTitle>
                 <TabMenu

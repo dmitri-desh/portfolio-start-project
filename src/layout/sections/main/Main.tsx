@@ -8,13 +8,12 @@ import Tilt from "react-parallax-tilt";
 
 export const Main: FC = () => {
     return (
-        <S.Main>
+        <S.Main id={"home"}>
             <Container>
                 <FlexWrapper alignItems="center" justifyContent="space-around" wrap="wrap">
                     <div>
                         <S.SmallText>Hi There</S.SmallText>
                         <S.Name>I am <span>Svetlana Dyablo</span></S.Name>
-                        {/*<S.MainTitle>A Web Developer.</S.MainTitle>*/}
                         <S.MainTitle>
                             <p>A Web Developer.</p>
                             <Typewriter
